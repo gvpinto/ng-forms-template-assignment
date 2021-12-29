@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  @ViewChild('f') signupForm: NgForm;
+  @ViewChild('f', { static: false }) signupForm: NgForm;
   subscriptions = ['Basic', 'Advanced', 'Pro'];
   defaultSubscription = 'Advanced';
   formSubmitted = false;
